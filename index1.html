@@ -6,6 +6,7 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="https://rawgit.com/RubaXa/Sortable/master/Sortable.js"></script>
  <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
@@ -22,24 +23,34 @@
     <div id="header" class="alert alert-info" role="alert">
           <h4>Employee Engagement Survey</h4>
     	  </div>
-  <ul id="draggablePanelList" class="list-unstyled">
-  <li class="panel panel-info">
-	<div class="panel-heading">
+
+
+<ul class="list-group sortable">
+  <li class="list-group-item" draggable="false" style="">
+		<div class="panel-heading">
 	 <h4>Salary </h4>
-	</div>
-    <div class="row lead">
-    <div id="stars" class="starrr"></div>
-  </div>
+		</div>
+		<div class="row lead">
+		<div id="stars" class="starrr"></div>
+	  </div>
   </li>
-  <li class="panel panel-info">
-  <div class="panel-heading">
+  <li class="list-group-item" draggable="false" style=""><div class="panel-heading">
     <h4>Safety </h4>
   </div>
     <div class="row lead">
         <div id="stars" class="starrr"></div>
+  </div></li>
+    <li class="list-group-item" draggable="false" style=""><div class="panel-heading">
+    <h4>Learning </h4>
   </div>
-</li>
+    <div class="row lead">
+        <div id="stars" class="starrr"></div>
+  </div></li>
+  
 </ul>
+
+
+
   <!-- <div class="row1">
 		<h3>Personal Growth </h3>
 	</div>
@@ -99,9 +110,8 @@
 </div>
 
 <script type="text/javascript" src="js/script1.js"></script>
-
 <script type="text/javascript">
-	$('#movable').draggable({containment: "parent"});
-</script>
+        new Sortable(document.getElementsByClassName('sortable')[0]);
+    </script>
 </body>
 </html>
