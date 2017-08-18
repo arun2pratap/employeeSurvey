@@ -1,0 +1,25 @@
+
+#stars {
+   color: #ee8b2d;
+  text-align: center;
+  height:10px;
+}
+#backImg{
+  margin-top: 20px;
+  height: 15%;
+  width: 100%;
+}
+ #header{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.panel-heading{
+  text-align: center;
+  margin-top: 5px;
+	margin-bottom: 5px;
+  height: 50px;
+}
+#draggablePanelList .panel-heading {
+        cursor: move;
+    }
